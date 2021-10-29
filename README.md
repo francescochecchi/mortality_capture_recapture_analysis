@@ -6,7 +6,7 @@ Francesco Checchi (London School of Hygiene and Tropical Medicine)
 
 francesco.checchi@lshtm.ac.uk
 
-Contributors: Rahaf Abou-Koura, Mervat Alhaffar, Maysoon Dahab, Pasquale Pepe
+Contributors: Rahaf Abu Koura, Mervat Alhaffar, Maysoon Dahab, Pasquale Pepe
 
 October 2021
 
