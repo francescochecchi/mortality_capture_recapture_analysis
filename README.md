@@ -1,6 +1,8 @@
 ## Generic R scripts for capture-recapture analysis of multiple lists of deceased persons
 ## Explanatory note
 
+October 2021
+
 Author:
 Francesco Checchi (London School of Hygiene and Tropical Medicine)
 
@@ -8,7 +10,8 @@ francesco.checchi@lshtm.ac.uk
 
 Contributors: Rahaf Abu Koura, Mervat Alhaffar, Maysoon Dahab, Pasquale Pepe
 
-October 2021
+Donor support: United Kingdom Foreign and Commonwealth Office, British Council
+
 
 ## Background
 Capture-recapture analysis (also known as multiple systems estimation or mark-recapture) is a well-established statistical technique to infer the true number of 'cases' from two or more lists, each of which may be incomplete to an unknown extent. The technique was developed for ecological studies but has been applied in multiple fields, including epidemiology. A key data requirement for capture-recapture analysis is that each list contain enough identifier information on the 'case' to enable confident record linkage, i.e. determination of whether any case also appears on other lists.
