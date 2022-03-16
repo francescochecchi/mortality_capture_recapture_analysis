@@ -459,7 +459,8 @@ f_describe <- function(f_data, f_data_name, f_pars, f_palette) {
       x3_lab <- c(x3_lab, paste("age_", x3[length(x3)], "_plus", sep = "") )
       
       # create categories
-      long[, "age_cat"] <- cut(long[, "age"], breaks = c(0, x3, 1000), labels = x3_lab)
+      long[, "age_cat"] <- cut(long[, "age"], breaks = c(0, x3, 1000), include.lowest = TRUE, right = FALSE,
+        labels = x3_lab)
     
     # Mean age by list, and p-value; add to main table
     tab <- rbind(tab, c("age (years)", "means", 
