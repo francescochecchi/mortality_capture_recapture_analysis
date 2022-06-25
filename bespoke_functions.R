@@ -423,7 +423,7 @@ f_describe <- function(f_data, f_data_name, f_pars, f_palette) {
       # create additional columns (characteristic, categories, p-value)
       x4 <- paste(month.abb[month(row.names(tab_part))], year(row.names(tab_part)), sep = " ")
       tab_part <- cbind(rep("month", length(x4)), x4, tab_part, 
-        c(fisher.test(tab_part[, x2])$p.value, rep(NA, nrow(tab_part) - 1)))
+        c(fisher.test(tab_part[, x2], simulate.p.value = TRUE)$p.value, rep(NA, nrow(tab_part) - 1)))
         # warning on p-value
         if (length(x4) > 5) warning("best not to present p-value: table has too many categories")
       
@@ -498,7 +498,7 @@ f_describe <- function(f_data, f_data_name, f_pars, f_palette) {
 
     # Create additional columns (characteristic, categories, p-value)
     tab_part <- cbind(rep("gender", nrow(tab_part)), row.names(tab_part), tab_part, 
-      c(fisher.test(tab_part[, x2])$p.value, rep(NA, nrow(tab_part) - 1)))
+      c(fisher.test(tab_part[, x2], simulate.p.value = TRUE)$p.value, rep(NA, nrow(tab_part) - 1)))
 
     # Create totals row
     tab_part <- rbind(tab_part, c("gender", "totals", colSums(tab_part[, c("any list", x2)]), NA))
@@ -545,7 +545,8 @@ f_describe <- function(f_data, f_data_name, f_pars, f_palette) {
       scale_color_manual(values = colours ) +
       scale_fill_manual(values = colours ) +
       theme(axis.title = element_text(size = 10, colour = "grey20"), 
-        legend.title = element_text(size = 10, colour = "grey20"))
+        legend.title = element_text(size = 10, colour = "grey20"),
+        axis.text.x = element_text(angle = 45, hjust = 1))
       
       print(plot_ym)
       ggsave(paste(x1, "_bar_descr_", "year_or_month.png", sep = ""), plot_ym, 
