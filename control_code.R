@@ -53,7 +53,7 @@
 
   #...................................      
   ## Identify data file in the directory based on it containing the string pattern 'list_data'
-  filename <- list.files(pattern = "^list_data")[1]
+  filename <- list.files(pattern = "list_data")[1]
   
   #...................................      
   ## Read in parameters
